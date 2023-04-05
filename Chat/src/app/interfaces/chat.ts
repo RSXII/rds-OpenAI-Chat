@@ -1,8 +1,9 @@
-interface IChatMessage {
-    user: ChatMessageUserType,
+import { ChatMessageUserType } from '../enums/chat'
+export interface IChatMessage {
+    user: string,
     message: string[],
 }
-interface IChatData {
+export interface IChatData {
     topic: string,
     body: IChatMessage[],
 }

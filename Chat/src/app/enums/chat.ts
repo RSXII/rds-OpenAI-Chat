@@ -1,4 +1,4 @@
-enum ChatMessageUserType {
+export enum ChatMessageUserType {
     USER,
     BOT
 }

@@ -9,19 +9,19 @@ This guide will help you set up the development environment for both the fronten
 
 ### Steps
 1. Install Angular CLI globally:
-npm install -g @angular/cli
+> npm install -g @angular/cli
 
 2. Clone the GitHub repository:
-git clone <repository-url>
+> git clone <repository-url>
 
 
 3. Navigate to the project directory and install dependencies:
-cd <project-directory>
-npm install
+> cd <project-directory>
+> npm install
 
 
 4. Verify the project runs correctly:
-ng serve
+> ng serve
 
 The application should be accessible at `http://localhost:4200/`.
 
@@ -35,7 +35,7 @@ The application should be accessible at `http://localhost:4200/`.
 ### Steps
 1. Create a new branch for the Spring Boot migration in the existing GitHub repository:
 
-git checkout -b spring-boot-migration
+> git checkout -b spring-boot-migration
 
 2. Create a new Spring Boot project using the [Spring Initializr](https://start.spring.io/) or your IDE.
 

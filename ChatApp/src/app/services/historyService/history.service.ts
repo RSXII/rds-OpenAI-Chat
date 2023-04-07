@@ -13,10 +13,4 @@ export class HistoryService {
     this.messageHistory.push(chatData)
   }
 
-  addMessageToChat(topic: string, message: IChatMessage): void {
-    const chatData = this.messageHistory.find(chat => chat.topic === topic);
-    if(chatData){
-      chatData.body.push(message)
-    }
-  }
 }

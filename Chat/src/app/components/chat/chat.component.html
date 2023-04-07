@@ -6,6 +6,6 @@
 <div class="flex">
   <form (submit)="sendMessage(content.value, $event)">
     <input type="text" name="chatInput" id="chatInput" class="flex-1 w-64 mx-2" #content required/>
-    <button class="bg-green-200 w-32 mx-2">Send</button>
+    <app-button class="w-32 mx-2 inline-block" [text]="buttonText"></app-button>
   </form>
 </div>

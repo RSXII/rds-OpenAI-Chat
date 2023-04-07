@@ -9,6 +9,7 @@ import {IChatMessage} from "../../interfaces/chat";
 })
 export class ChatComponent implements OnInit{
   @ViewChild('content') contentInput?: ElementRef;
+  buttonText: string = 'Send'
 
   messages: IChatMessage[] = [];
   constructor(private chatService: ChatService) {

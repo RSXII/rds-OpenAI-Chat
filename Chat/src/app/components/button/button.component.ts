@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
     @Input() public text?: string = "Button";
-    public svgPath?: string;
+    @Input() public svgPath?: string;
 
     constructor() {
     }

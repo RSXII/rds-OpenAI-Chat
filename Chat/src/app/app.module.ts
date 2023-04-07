@@ -8,6 +8,7 @@ import { HistoryComponent } from './components/history/history.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { MainComponent } from './main/main.component';
 import { ButtonComponent } from './components/button/button.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ButtonComponent } from './components/button/button.component';
     MainComponent,
     ButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgOptimizedImage],
   providers: [],
   bootstrap: [AppComponent],
 })

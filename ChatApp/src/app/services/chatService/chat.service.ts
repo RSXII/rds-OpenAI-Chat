@@ -20,9 +20,6 @@ export class ChatService {
       this.isNewChat = false;
       const chatData: IChatData = {topic: 'New Chat', body: this.messages};
       this.historyService.addNewChat(chatData)
-
-    }else{
-      this.historyService.addMessageToChat('New Chat', {user: sender, message: [content]})
     }
     this.messages.push(message)
   }

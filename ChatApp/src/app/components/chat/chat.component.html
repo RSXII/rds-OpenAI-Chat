@@ -1,0 +1,14 @@
+<div>
+  <div class="h-64 bg-zinc-800 mx-2 mb-4 px-4 pt-2 overflow-scroll" >
+    <p *ngFor="let message of messages">{{ message.message }}</p>
+  </div>
+</div>
+<div class="flex">
+  <form (submit)="sendMessage(content.value, $event)">
+    <div class="relative inline-block">
+      <label for="chatInput" class="absolute -top-2 left-2 inline-block bg-neutral-700 px-1 text-xs font-medium text-slate-100">Chat</label>
+      <input type="text" name="chatInput" id="chatInput" class=" w-full rounded-md border-0 py-1.5 text-slate-100 bg-neutral-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Type Something..." #content required>
+    </div>
+    <app-button class="w-32 mx-2 inline-block" [text]="buttonText" [svgPath]="svgPath" (click)="sendMessage(content.value, $event)"></app-button>
+  </form>
+</div>

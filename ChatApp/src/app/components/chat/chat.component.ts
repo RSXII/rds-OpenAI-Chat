@@ -10,6 +10,7 @@ import {IChatMessage} from "../../interfaces/chat";
 export class ChatComponent implements OnInit{
   @ViewChild('content') contentInput?: ElementRef;
   buttonText: string = 'Send'
+  svgPath?: string = `../../../assets/sendArrow.svg`
 
   messages: IChatMessage[] = [];
   constructor(private chatService: ChatService) {

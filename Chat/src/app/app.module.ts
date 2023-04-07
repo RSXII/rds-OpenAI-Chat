@@ -7,6 +7,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { HistoryComponent } from './components/history/history.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { MainComponent } from './main/main.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MainComponent } from './main/main.component';
     HistoryComponent,
     SettingsComponent,
     MainComponent,
+    ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent {
-  buttonText = 'New Conversation'
+  buttonText = 'New Conversation';
+  svgPath?: string = '../../../assets/plusButton.svg';
+    constructor() { }
 }

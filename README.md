@@ -1,51 +1,50 @@
-# Chatbot Application Development Environment Setup
+# RDS-OpenAI-Chat
 
-This guide will help you set up the development environment for both the frontend and backend of our chatbot application.
+This project is an Angular application that utilizes OpenAI's GPT-4 to provide a chat interface. The frontend is built with Angular, and the backend uses Express and the OpenAI API.
 
-## Frontend (Angular)
+## Prerequisites
 
-### Prerequisites
-- Install [Node.js](https://nodejs.org/) (includes npm - Node Package Manager)
+- Node.js v14 or higher
+- NPM v7 or higher
+- Angular CLI v15.2.4 or higher
+    
+## Setup
 
-### Steps
-1. Install Angular CLI globally:
-> npm install -g @angular/cli
+1. Clone the repository:
 
-2. Clone the GitHub repository:
-> git clone <repository-url>
+> git clone https://github.com/your-username/rds-openai-chat.git
+> cd rds-openai-chat
 
+2. Install the required dependencies:
 
-3. Navigate to the project directory and install dependencies:
-> cd <project-directory>
 > npm install
 
+3. Create a .env file in the root of the project and add your OpenAI API key:    
 
-4. Verify the project runs correctly:
-> ng serve
+> OPENAI_API_KEY=your-api-key
 
-The application should be accessible at `http://localhost:4200/`.
+Replace your-api-key with your actual OpenAI API key.
 
-## Backend (Java Spring Boot)
+## Running the project
 
-### Prerequisites
-- Install [Java Development Kit (JDK)](https://adoptium.net/) (preferably JDK 11 or higher)
-- Install a Java IDE such as [IntelliJ IDEA](https://www.jetbrains.com/idea/) or [Eclipse](https://www.eclipse.org/downloads/)
-- Install a build tool: [Maven](https://maven.apache.org/download.cgi) or [Gradle](https://gradle.org/install/)
+To start the development server for both the frontend and the API, run the following command:
 
-### Steps
-1. Create a new branch for the Spring Boot migration in the existing GitHub repository:
+> npm run start
 
-> git checkout -b spring-boot-migration
+This command will start both the Angular and the Express server concurrently. The Angular app will be available at http://localhost:4200/, and the API will be available at http://localhost:3000/.
 
-2. Create a new Spring Boot project using the [Spring Initializr](https://start.spring.io/) or your IDE.
+## Building the project
 
-3. Gradually replace the Express backend with the Spring Boot implementation. Copy the relevant code and logic from the Express project, and rewrite it to work with Java and Spring Boot.
+To build the project, run the following command:
 
-4. Configure the new Spring Boot project to work with PostgreSQL by adding the necessary dependencies and settings.
+> npm run build
 
-5. Verify that the Spring Boot application runs correctly and that the APIs work as expected.
+This will create a dist/ folder containing the production-ready files for the frontend.
 
-## Additional Notes
+## Customization
 
-For further development, ensure that you keep the frontend and backend projects in sync and test the application regularly. If you encounter any issues or need clarification, don't hesitate to ask for assistance.
+You can customize the project by editing the files in the src/app (frontend) and api (backend) directories. To add additional dependencies, use npm install followed by the package name.
 
+## License
+
+This project is licensed under the MIT License

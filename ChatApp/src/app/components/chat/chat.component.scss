@@ -2,3 +2,6 @@ p{
   color: white;
   padding: 5px;
 }
+::ng-deep .send-button button{
+  margin-left: auto;
+}

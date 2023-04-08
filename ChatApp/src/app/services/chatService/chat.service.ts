@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
+import { Subject } from "rxjs";
 import { IChatMessage, IChatData } from '../../interfaces/chat';
 import {HistoryService} from "../historyService/history.service";
 
@@ -6,7 +7,9 @@ import {HistoryService} from "../historyService/history.service";
   providedIn: 'root'
 })
 export class ChatService {
-  messages: IChatMessage[] = [];
+  private messagesSubject = new Subject<IChatMessage[]>();
+  messages$ = this.messagesSubject.asObservable();
+  private messages: IChatMessage[] = [];
   isNewChat: boolean = true;
   constructor(private historyService: HistoryService) { }
 
@@ -18,9 +21,15 @@ export class ChatService {
 
     if(this.isNewChat){
       this.isNewChat = false;
-      const chatData: IChatData = {topic: 'New Chat', body: this.messages};
+      const chatData: IChatData = {topic: content, body: this.messages};
       this.historyService.addNewChat(chatData)
     }
     this.messages.push(message)
+    this.messagesSubject.next(this.messages)
+  }
+  newMessage(): void {
+    this.messages = [];
+    this.isNewChat = true;
+    this.messagesSubject.next(this.messages);
   }
 }

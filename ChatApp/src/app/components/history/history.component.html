@@ -1,4 +1,8 @@
-<div class="bg-slate-400 w-full px-4 py-2 h-1/2">
-<app-button [text]='buttonText' [svgPath]="svgPath"></app-button>
-
+<div class="bg-slate-400 w-full px-4 py-2 h-1/2 overflow-scroll">
+<app-button [text]='buttonText' [svgPath]="svgPath" (click)="chatService.newMessage()"></app-button>
+    <ul>
+<li *ngFor="let item of historyItems">
+    <p>{{item.topic}}</p>
+        </li>
+    </ul>
 </div>

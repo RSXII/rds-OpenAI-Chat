@@ -1,9 +1,9 @@
-<div class="grid grid-cols-3 gap-4 bg-neutral-700 h-96">
-  <div class="col-span-1 h-full">
-    <app-history></app-history>
-    <app-settings></app-settings>
-  </div>
-  <div class="col-span-2 p-2">
+<div class="flex gap-4 bg-neutral-700 min-h-screen">
+  <nav class="flex flex-col min-h-full md:w-[300px]">
+    <app-history class="h-1/2"></app-history>
+    <app-settings class="h-1/2"></app-settings>
+  </nav>
+  <div class="flex-col flex-1 p-2">
     <app-chat></app-chat>
   </div>
 </div>

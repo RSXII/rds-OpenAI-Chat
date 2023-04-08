@@ -12,7 +12,10 @@ This project is an Angular application that utilizes OpenAI's GPT-4 to provide a
 
 1. Clone the repository:
 
-> git clone https://github.com/{YOUR-USERNAME}/rds-openai-chat.git
+> git clone https://github.com/YOUR-USERNAME/rds-openai-chat.git
+
+Replace YOUR-USERNAME with your github username.
+
 > cd rds-openai-chat
 
 2. Install the required dependencies:

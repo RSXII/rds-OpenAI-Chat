@@ -1,4 +1,4 @@
-<div class="bg-slate-400 w-full px-4 py-2 h-1/2 overflow-scroll">
+<div class="bg-slate-400 w-full px-4 py-2 basis-auto grow shrink overflow-scroll h-full">
 <app-button [text]='buttonText' [svgPath]="svgPath" (click)="chatService.newMessage()"></app-button>
     <ul>
 <li *ngFor="let item of historyItems">

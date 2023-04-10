@@ -1,13 +1,13 @@
-<div class="w-full flex flex-1 flex-col">
-  <div class="h-full flex flex-col" id="messageContainer">
-    <div class=" bg-zinc-800 overflow-scroll h-full flex-grow min-h-[200px]" >
+<div class="w-full flex flex-1 flex-col md:min-h-[300px] md:max-h-[300px] lg:min-h-[500px] lg:max-h-[500px] overflow-scroll px-16 bg-neutral-700">
+<!--  <div class="h-full flex flex-col" id="messageContainer">-->
+<!--    <div class="px-32 py-8 bg-zinc-800 overflow-scroll h-full flex-grow min-h-[200px]" >-->
       <p *ngFor="let message of messages">{{ message.message }}</p>
-    </div>
-  </div>
-  <div class="absolute bottom-0 left-0 w-full pb-8 mt-auto">
-    <form (submit)="sendMessage(content.value, $event)" class="w-full lg:mx-auto lg:max-w-2xl">
-      <div class="flex w-full lg:mx-auto justify-between">
-        <div class="relative flex-auto w-64">
+<!--    </div>-->
+<!--  </div>-->
+  <div class="absolute bottom-0 left-0 w-full py-6 mt-auto bg-neutral-700">
+    <form (submit)="sendMessage(content.value, $event)" class="w-full lg:mx-auto lg:max-w-2xl ">
+      <div class="flex w-full lg:mx-auto justify-between pl-32 sm:pr-8 lg:pr-0">
+        <div class="relative flex-auto w-64 ">
           <label for="chatInput" class="absolute -top-2 left-2 inline-block bg-neutral-700 px-1 text-xs font-medium text-slate-100">Chat</label>
           <input type="text" name="chatInput" id="chatInput" class=" w-full rounded-md border-0 py-1.5 text-slate-100 bg-neutral-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Type Something..." #content required>
         </div>

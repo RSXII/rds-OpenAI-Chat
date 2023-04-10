@@ -1,9 +1,5 @@
 <div class="w-full flex flex-1 flex-col md:min-h-[300px] md:max-h-[300px] lg:min-h-[500px] lg:max-h-[500px] overflow-scroll px-16 bg-neutral-700">
-<!--  <div class="h-full flex flex-col" id="messageContainer">-->
-<!--    <div class="px-32 py-8 bg-zinc-800 overflow-scroll h-full flex-grow min-h-[200px]" >-->
       <p *ngFor="let message of messages">{{ message.message }}</p>
-<!--    </div>-->
-<!--  </div>-->
   <div class="absolute bottom-0 left-0 w-full py-6 mt-auto bg-neutral-700">
     <form (submit)="sendMessage(content.value, $event)" class="w-full lg:mx-auto lg:max-w-2xl ">
       <div class="flex w-full lg:mx-auto justify-between pl-32 sm:pr-8 lg:pr-0">

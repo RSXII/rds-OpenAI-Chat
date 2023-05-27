@@ -39,4 +39,12 @@ export class FireAuthService {
             console.log(error);
         }
     }
+    async resetPassword(email: string): Promise<void> {
+        try{
+            const user = this.userAuth.sendPasswordResetEmail(email)
+            console.log('Successfully sent password reset email')
+        }catch{
+
+        }
+    }
 }

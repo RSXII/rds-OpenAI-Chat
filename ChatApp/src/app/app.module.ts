@@ -16,6 +16,7 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { ChatMessageComponent } from './components/chat-message/chat-message.component';
+import { SettingsOptionComponent } from './components/settings/settings-option/settings-option.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ChatMessageComponent } from './components/chat-message/chat-message.com
     MainComponent,
     ButtonComponent,
     ChatMessageComponent,
+    SettingsOptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgOptimizedImage,
     // AngularFireModule.initializeApp(environment.firebase),

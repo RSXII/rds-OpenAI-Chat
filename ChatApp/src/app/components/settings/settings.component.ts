@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent {
+  public settingsOpen = false;
+
+    constructor() { }
+
+  public toggleSettings() {
+    this.settingsOpen = !this.settingsOpen;
+  }
 
 }

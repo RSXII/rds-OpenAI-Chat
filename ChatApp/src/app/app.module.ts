@@ -34,4 +34,5 @@ import { ChatMessageComponent } from './components/chat-message/chat-message.com
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}

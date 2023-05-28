@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {IChatData, IChatMessage} from "../../interfaces/chat";
+import {IChatData} from "../../interfaces/chat";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class HistoryService {
   constructor() { }
 
   addNewChat(chatData: IChatData): void {
-    this.messageHistory.push(chatData)
+    this.messageHistory.unshift(chatData)
   }
 
 }
